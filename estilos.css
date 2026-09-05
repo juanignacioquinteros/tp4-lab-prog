@@ -1,0 +1,269 @@
+/* =========================================
+   RUTAS AR — Guía de Viajes
+   Paleta de colores armónica (tonos tierra + mar)
+   ========================================= */
+:root {
+  --color-primario: #0F5257;      /* teal profundo */
+  --color-primario-claro: #2E6E73;
+  --color-acento: #D96C4A;        /* terracota */
+  --color-secundario: #E8C07D;    /* arena */
+  --color-fondo: #FBF5EC;         /* crema */
+  --color-texto: #243B3D;         /* casi negro verdoso */
+  --color-borde: rgb(15, 82, 87);
+  --color-visitado: hsl(174, 20%, 45%);
+  --sombra: 0 2px 6px rgba(36, 59, 61, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Verdana, sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================================
+   ENCABEZADO Y NAVEGACIÓN (consistente en todas las páginas)
+   ========================================= */
+header {
+  background-color: var(--color-fondo);
+  border-bottom: 3px solid var(--color-primario);
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo-link {
+  display: inline-block;
+  border: none;
+}
+
+.logo-link img {
+  width: 56px;
+  height: 56px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Estados de enlace requeridos */
+nav a:link,
+nav a:visited {
+  color: var(--color-primario);
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  text-decoration: underline;
+}
+
+nav a:active {
+  background-color: var(--color-acento);
+  color: #fff;
+}
+
+/* "Usted está aquí": página activa resaltada */
+nav a.activo {
+  background-color: var(--color-primario);
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* =========================================
+   ENLACES GENERALES DEL CONTENIDO
+   ========================================= */
+a:link {
+  color: var(--color-primario);
+}
+
+a:visited {
+  color: var(--color-visitado);
+}
+
+a:hover {
+  color: var(--color-acento);
+  text-decoration: underline;
+}
+
+a:active {
+  color: #A8422A;
+}
+
+/* Botón simulado con un enlace */
+.boton {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  margin-top: 1rem;
+  background-color: var(--color-acento);
+  color: #ffffff !important;
+  border-radius: 8px;
+  text-decoration: none !important;
+  font-weight: bold;
+  box-shadow: var(--sombra);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.boton:hover {
+  background-color: #C25836;
+  transform: translateY(-2px);
+}
+
+.boton:active {
+  background-color: #9A4127;
+  transform: translateY(0);
+}
+
+/* =========================================
+   ESTRUCTURA / MODELO DE CAJA
+   ========================================= */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid #dcd2c0;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: var(--color-primario);
+  margin-bottom: 0.4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--color-primario-claro);
+  border-bottom: 2px solid var(--color-secundario);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  color: var(--color-acento);
+  margin-bottom: 0.4rem;
+}
+
+/* Hero de portada */
+.hero {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: var(--sombra);
+}
+
+.hero-texto {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background-color: rgba(251, 245, 236, 0.9);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 5px solid var(--color-acento);
+}
+
+/* Galería de destinos */
+.grid-destinos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.tarjeta {
+  border: 1px solid #dcd2c0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--color-fondo);
+  box-shadow: var(--sombra);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  border-bottom: 3px solid var(--color-secundario);
+}
+
+.tarjeta-contenido {
+  padding: 1rem;
+}
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+footer {
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+footer a:link,
+footer a:visited {
+  color: var(--color-secundario);
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* =========================================
+   FORMULARIO DE CONTACTO
+   ========================================= */
+.contacto-info {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contacto-info > div {
+  flex: 1;
+  min-width: 220px;
+}
+
+@media (max-width: 640px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

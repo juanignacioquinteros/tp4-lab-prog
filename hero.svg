@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8C07D"/>
+      <stop offset="100%" stop-color="#F7E6C4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" fill="url(#cielo)"/>
+  <circle cx="1000" cy="90" r="55" fill="#FBF5EC"/>
+  <polygon points="0,320 200,150 340,280 500,120 680,300 850,180 1000,300 1200,220 1200,400 0,400" fill="#0F5257"/>
+  <polygon points="0,360 250,260 480,340 720,250 950,340 1200,280 1200,400 0,400" fill="#123F42"/>
+  <rect x="0" y="380" width="1200" height="20" fill="#243B3D"/>
+</svg>

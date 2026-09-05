@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="100%" height="100%">
+  <rect width="400" height="260" fill="#F7E6C4"/>
+  <polygon points="0,150 100,40 200,150" fill="#8C9A5B"/>
+  <polygon points="150,150 260,60 380,150" fill="#6F7D46"/>
+  <rect x="0" y="150" width="400" height="110" fill="#D96C4A" opacity="0.15"/>
+  <g stroke="#6F7D46" stroke-width="4">
+    <line x1="20" y1="230" x2="20" y2="180"/>
+    <line x1="60" y1="230" x2="60" y2="180"/>
+    <line x1="100" y1="230" x2="100" y2="180"/>
+    <line x1="140" y1="230" x2="140" y2="180"/>
+    <line x1="180" y1="230" x2="180" y2="180"/>
+    <line x1="220" y1="230" x2="220" y2="180"/>
+    <line x1="260" y1="230" x2="260" y2="180"/>
+    <line x1="300" y1="230" x2="300" y2="180"/>
+    <line x1="340" y1="230" x2="340" y2="180"/>
+    <line x1="380" y1="230" x2="380" y2="180"/>
+  </g>
+</svg>
